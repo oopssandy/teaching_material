@@ -44,7 +44,10 @@ def maxSubSum(a):
 # example: a=[1,2,1,3] -> 2; a=[1,2,3] -> -1
 ##################################################################
 def firstDuplicate(a):
-    pass
+    
+    for i in a :
+        if a.count(i) > 1
+        re
 
 ##################################################################
 # return the count of the maximum number of duplicates in a
