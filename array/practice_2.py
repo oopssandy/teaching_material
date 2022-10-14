@@ -46,8 +46,10 @@ def maxSubSum(a):
 def firstDuplicate(a):
     
     for i in a :
-        if a.count(i) > 1
-        re
+        if a.count(i) > 1:
+
+            print(a.count(1))
+        
 
 ##################################################################
 # return the count of the maximum number of duplicates in a
