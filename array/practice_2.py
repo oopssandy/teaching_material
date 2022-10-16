@@ -44,12 +44,18 @@ def maxSubSum(a):
 # example: a=[1,2,1,3] -> 2; a=[1,2,3] -> -1
 ##################################################################
 def firstDuplicate(a):
-    
-    for i in a :
-        if a.count(i) > 1:
-
-            print(a.count(1))
-        
+    c=[]
+    for i in a:
+        if a.count(i)==1:
+            c.append(i)
+        if a.count(i)>1:
+            y=a.index(i)
+            a.pop(y)
+            r=a.index(i)
+            return r+1
+            break
+    if len(c) == len(a):
+        return -1
 
 ##################################################################
 # return the count of the maximum number of duplicates in a
@@ -57,7 +63,14 @@ def firstDuplicate(a):
 # example: a=[1,1,1,2,2,3] -> 3
 ##################################################################
 def maxDuplicate(a):
-    pass
+    c=[]
+    for i in a:
+        b=a.count(i)
+        c.append(b)
+    max_count = max(c)
+    y=c.index(max_count)
+    return a[y]*max_count
+    
 
 ##################################################################
 # return new array that has elements of a and reordered following 
@@ -68,7 +81,11 @@ def maxDuplicate(a):
 #          a=[33,44,55,22,11] b=[2,3,4,1,0]-> [11,22,33,44,55]
 ##################################################################
 def reorderArr(a,b):
-    pass
+    c=[]
+    for i in b :
+        aa = a[i]
+        c.append(aa)
+    return c
 
 ##################################################################
 # return a sorted array with elements of a using merge sort 
@@ -82,4 +99,4 @@ def mergeSort(a):
 # example: a=[1,3,2,4] -> [1,2,3,4]
 ##################################################################
 def heapSort(a):
-    pass
+    return a.sort()
